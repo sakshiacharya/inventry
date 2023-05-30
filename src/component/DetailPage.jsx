@@ -16,7 +16,6 @@ export const DetailPage = () => {
 
     const memoizedProductDetail = useMemo(() => productDetail, [productDetail]);
 
-    const [detaildata, setDetaildata] = useState([]);
 
 
 
