@@ -27,7 +27,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin: 0 10px;
-} 
+}
 
 .container {
   max-width: 1500px;
@@ -54,7 +54,7 @@ button {
   padding: 12px 15px;
 }
 
-.styled-table tbody  tr {
+.styled-table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
 
@@ -71,7 +71,7 @@ button {
   color: #009879;
 }
 
-.text-center{
+.text-center {
 
   text-align: center;
 
@@ -79,7 +79,8 @@ button {
 
 .pagination {
   display: inline-block;
-} 
+  padding: 25px;
+}
 
 .pagination a {
   color: black;
@@ -89,6 +90,7 @@ button {
   transition: background-color .3s;
   border: 1px solid #ddd;
   margin: 0 4px;
+  cursor: pointer;
 }
 
 .pagination a.active {
@@ -97,23 +99,25 @@ button {
   border: 1px solid #009879;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
 
 
 
-.details{
+.details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 25px;
   padding: 50px;
 }
 
-.details div{
+.details div {
   display: flex;
   flex-direction: column;
 }
 
-.details div label{
+.details div label {
   font-size: 14px;
   color: #676464;
   margin-bottom: 10px;
@@ -131,9 +135,16 @@ button {
   border: 1px solid #ddd;
 }
 
-.header{
+.header {
   display: block;
   text-align: center;
-  
+
   text-transform: uppercase;
+}
+
+.thankyou {
+  display: block;
+  font-size: 26px;
+  color: #009879;
+  font-weight: bold;
 }
