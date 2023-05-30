@@ -18,7 +18,6 @@ export const DetailPage = () => {
 
 
 
-
     useEffect(() => {
         dispatch(detailData(id));
     }, [id, dispatch]);

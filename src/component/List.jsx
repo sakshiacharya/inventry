@@ -20,7 +20,7 @@ export const List = () => {
     UnitsInStock: '',
     UnitsOnOrder: '',
     ReorderLevel: '',
-    Discontinued: false,
+    Discontinued: '',
   });
 
   const addProduct = (event) => {
@@ -64,10 +64,10 @@ export const List = () => {
     },
   };
 
-   
+
   Modal.setAppElement('#root');
 
- 
+
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -84,6 +84,11 @@ export const List = () => {
     setIsOpen(false);
   }
 
+  const handleSelectChange = (event) => {
+    const selectedValue = event.target.value;
+    setUserData({ ...userData, Discontinued: selectedValue });
+  };
+
 
 
   return (
@@ -98,7 +103,7 @@ export const List = () => {
           contentLabel="add product">
           <>
             {
-             addItem ? <div className='thankyou'>Data is submitted Successfully..</div> :
+              addItem ? <div className='thankyou'>Data is submitted Successfully..</div> :
 
                 <div >
                   <h1 className="header" >Add New Product</h1>
@@ -150,12 +155,11 @@ export const List = () => {
 
                     <div>
                       <label for="discontinued">Discontinued:</label>
-                      <select name="discontinued" id="discontinued" onChange={(e) => { setUserData({ ...userData, Discontinued: e.target.value }) }}>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
+                      <select name="discontinued" id="discontinued" onChange={handleSelectChange}>  
+                        <option value="true">No</option> 
+                        <option value="false">Yes</option>
 
-                      </select>
-                      {/* <input id="discontinued" placeholder="Discontinued" type="text" /> */}
+                      </select> 
                     </div>
                     <div className='text-center' >
                       <div className="back-button" style={{ display: 'flex', flexDirection: 'row' }}>
