@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
-import fetchProductReducer from "./fetchProductReducer";
-import detailReducer from "./detailReducer";
+import fetchUserReducer from "./fetchUserReducer";
 const reducer = combineReducers({
-    fetchProductReducer: fetchProductReducer,
-    detailReducer: detailReducer
+  
+    fetchUserReducer: fetchUserReducer
 })
 
 export default reducer;

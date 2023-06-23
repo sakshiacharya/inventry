@@ -1,4 +1,4 @@
-export const detailData = (id) => {
+export const detailData = (data, id) => {
     return async (dispatch) => {
         
 

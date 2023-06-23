@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<List/>}> 
        
         </Route>
-        <Route path="/:id" element={<DetailPage/>}/> 
+       
       </Routes> 
     </BrowserRouter>
     </div>
